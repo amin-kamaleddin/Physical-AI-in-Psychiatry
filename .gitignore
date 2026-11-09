@@ -1,35 +1,28 @@
-# Python
 __pycache__/
-*.py[cod]
 .pytest_cache/
+*.py[cod]
+*.so
+.DS_Store
+.ipynb_checkpoints/
 .venv/
 venv/
-*.egg-info/
-dist/
-build/
-# Credentials and local configuration
 .env
 .env.*
 !.env.example
 *.pem
 *.key
 *.p12
-*.pfx
-credentials.json
-secrets.json
-*.token
-# Never commit real/clinical/restricted data
-data/private/
-data/restricted/
-data/clinical/
-data/raw_real/
-**/patient_records/
-# Local/editorial build temporary files
-.DS_Store
-.ipynb_checkpoints/
+*.secret
+*_token.txt
+credentials*.json
+secrets*.json
+*_private.csv
+*_confidential.*
 _docx_render/
-*.aux
-*.log
-*.out
-*.toc
-manuscript/*.synctex.gz
+publication/*.aux
+publication/*.log
+publication/*_build_stage.docx
+publication/*_letter.docx
+publication/manuscript_alternative_title.docx
+publication/Physical_AI_Psychiatry_Final_Manuscript.*
+figures/_cache/

@@ -58,8 +58,8 @@ def test_bootstrap_and_randomization_are_deterministic():
 
 
 def test_publication_outputs_and_editable_svgs_exist():
-    pngs = sorted((ROOT / 'figures' / 'png').glob('*.png'))
-    svgs = sorted((ROOT / 'figures' / 'svg').glob('*.svg'))
+    pngs = sorted((ROOT / 'figures' / 'model_outputs' / 'png').glob('*.png'))
+    svgs = sorted((ROOT / 'figures' / 'model_outputs' / 'svg').glob('*.svg'))
     assert len(pngs) == 12
     assert len(svgs) == 12
     for p in svgs:
@@ -73,7 +73,7 @@ def test_publication_outputs_and_editable_svgs_exist():
 
 def test_bootstrap_outputs_and_statistical_fields_exist():
     for filename in ['individual_contrast_summary.csv', 'system_contrast_summary.csv']:
-        df = pd.read_csv(ROOT / 'outputs' / filename)
+        df = pd.read_csv(ROOT / 'results' / filename)
         required = {
             'bootstrap_ci_low', 'bootstrap_ci_high', 'bootstrap_resamples',
             'paired_t_pvalue', 'sign_flip_pvalue', 'holm_sign_flip_pvalue',
@@ -92,15 +92,15 @@ def test_bootstrap_outputs_and_statistical_fields_exist():
         assert (df['minimum_monte_carlo_pvalue'] == 1 / 100_001).all()
         assert (df['alternative'] == 'two-sided').all()
 
-    assert (ROOT / 'outputs' / 'individual_weekly_bootstrap_summary.csv').exists()
-    assert (ROOT / 'outputs' / 'individual_parameter_uncertainty_summary.csv').exists()
-    assert (ROOT / 'outputs' / 'statistical_analysis_summary.csv').exists()
-    assert (ROOT / 'docs' / 'STATISTICAL_ANALYSIS.md').exists()
+    assert (ROOT / 'results' / 'individual_weekly_bootstrap_summary.csv').exists()
+    assert (ROOT / 'results' / 'individual_parameter_uncertainty_summary.csv').exists()
+    assert (ROOT / 'results' / 'statistical_analysis_summary.csv').exists()
+    assert (ROOT / 'docs' / 'STATISTICAL_METHODS.md').exists()
 
 
 def test_current_manuscript_contains_main_displays_and_sources():
-    docx = ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Manuscript_v4.5.docx'
-    supplementary = ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Supplementary_Information_v4.5.docx'
+    docx = ROOT / 'publication' / 'manuscript.docx'
+    supplementary = ROOT / 'publication' / 'supplementary_information.docx'
     assert docx.stat().st_size > 100_000
     assert supplementary.stat().st_size > 20_000
     with zipfile.ZipFile(docx) as zf:
@@ -117,9 +117,9 @@ def test_current_manuscript_contains_main_displays_and_sources():
 
 
 def test_manuscript_key_results_match_generated_contrasts():
-    key = json.loads((ROOT / 'outputs' / 'manuscript_key_results.json').read_text(encoding='utf-8'))
-    individual = pd.read_csv(ROOT / 'outputs' / 'individual_contrast_summary.csv')
-    service = pd.read_csv(ROOT / 'outputs' / 'system_contrast_summary.csv')
+    key = json.loads((ROOT / 'results' / 'manuscript_key_results.json').read_text(encoding='utf-8'))
+    individual = pd.read_csv(ROOT / 'results' / 'individual_contrast_summary.csv')
+    service = pd.read_csv(ROOT / 'results' / 'system_contrast_summary.csv')
 
     gate = 'Embodied robot + human safety gate'
     response = individual[(individual['comparator'] == gate) & (individual['metric'] == 'response_percent')].iloc[0]
@@ -134,14 +134,14 @@ def test_manuscript_key_results_match_generated_contrasts():
     assert key['mean_wait_minutes']['mean_difference'] == wait['mean_difference']
 
 
-def test_reanalysis_outputs_and_current_submission_artifacts_exist():
-    review = ROOT / 'outputs' / 'reviewer_reanalysis'
+def test_structural_diagnostics_and_publication_assets_exist():
+    review = ROOT / 'results' / 'diagnostics'
     required = [
         'individual_estimand_sensitivity_summary.csv',
         'individual_parameter_uncertainty_nested_summary.csv',
         'service_capacity_sensitivity_summary.csv',
         'patient_pathway_bundle_ablation_summary.csv',
-        'reviewer_reanalysis_summary.json',
+        'structural_sensitivity_summary.json',
     ]
     for name in required:
         assert (review / name).stat().st_size > 0
@@ -155,16 +155,16 @@ def test_reanalysis_outputs_and_current_submission_artifacts_exist():
     assert nested.loc['completion_negative', 'percent_of_scenario_draws'] == 100.0
     assert nested.loc['response_positive', 'inner_replications_per_draw'] == 5
 
-    assert len(list((ROOT / 'figures' / 'journal' / 'png').glob('*.png'))) == 17
-    assert len(list((ROOT / 'figures' / 'journal' / 'svg').glob('*.svg'))) == 17
+    assert len(list((ROOT / 'figures' / 'individual_displays' / 'png').glob('*.png'))) == 17
+    assert len(list((ROOT / 'figures' / 'individual_displays' / 'svg').glob('*.svg'))) == 17
     for path in [
-        ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Integrated_Manuscript_v4.3.docx',
-        ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Manuscript_v4.5.docx',
-        ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Supplementary_Information_v4.5.docx',
+        ROOT / 'publication' / 'source_material/integrated_model_text.docx',
+        ROOT / 'publication' / 'manuscript.docx',
+        ROOT / 'publication' / 'supplementary_information.docx',
     ]:
         assert path.stat().st_size > 20_000
 
-    active = ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Manuscript_v4.5.docx'
+    active = ROOT / 'publication' / 'manuscript.docx'
     with zipfile.ZipFile(active) as zf:
         embedded = [name for name in zf.namelist() if name.startswith('word/media/')]
         document_xml = zf.read('word/document.xml').decode('utf-8')
@@ -176,13 +176,13 @@ def test_reanalysis_outputs_and_current_submission_artifacts_exist():
         assert f'Table {number}' in document_xml
 
 
-def test_v43_parameter_documentation_and_global_sensitivity_artifacts_exist():
+def test_parameter_documentation_and_global_sensitivity_artifacts_exist():
     from dataclasses import fields
     from individual_microsimulation import ArmConfig
     from service_queue_simulation import QueueConfig
 
-    individual_dictionary = pd.read_csv(ROOT / 'config' / 'individual_parameter_dictionary_v4.3.csv')
-    service_dictionary = pd.read_csv(ROOT / 'config' / 'service_parameter_dictionary_v4.3.csv')
+    individual_dictionary = pd.read_csv(ROOT / 'config' / 'individual_parameter_dictionary.csv')
+    service_dictionary = pd.read_csv(ROOT / 'config' / 'service_parameter_dictionary.csv')
 
     required_columns = {
         'parameter', 'unit_or_scale', 'functional_role', 'base_case_value_or_distribution',
@@ -196,29 +196,29 @@ def test_v43_parameter_documentation_and_global_sensitivity_artifacts_exist():
     assert {f.name for f in fields(QueueConfig)} - {'name'} <= set(service_dictionary['parameter'])
 
     for path in [
-        ROOT / 'docs' / 'COMPLETE_MODEL_SPECIFICATION_v4.3.md',
-        ROOT / 'docs' / 'STAKEHOLDER_ELICITATION_AND_FACE_VALIDATION_PROTOCOL_v4.3.md',
-        ROOT / 'config' / 'parameter_elicitation_template_v4.3.csv',
-        ROOT / 'outputs' / 'assumption_scenarios_v4_3' / 'neutral_skeptical_contrast_summary.csv',
-        ROOT / 'outputs' / 'global_sensitivity' / 'sobol_first_total_indices.csv',
-        ROOT / 'outputs' / 'global_sensitivity' / 'sobol_second_order_indices.csv',
-        ROOT / 'outputs' / 'global_sensitivity' / 'analysis_metadata.json',
+        ROOT / 'docs' / 'MODEL_SPECIFICATION.md',
+        ROOT / 'docs' / 'ELICITATION_AND_VALIDATION_PROTOCOL.md',
+        ROOT / 'config' / 'parameter_elicitation_template.csv',
+        ROOT / 'results' / 'assumption_stress_tests' / 'neutral_skeptical_contrast_summary.csv',
+        ROOT / 'results' / 'global_sensitivity_screening' / 'sobol_first_total_indices.csv',
+        ROOT / 'results' / 'global_sensitivity_screening' / 'sobol_second_order_indices.csv',
+        ROOT / 'results' / 'global_sensitivity_screening' / 'analysis_metadata.json',
     ]:
         assert path.stat().st_size > 0
 
-    status_text = (ROOT / 'docs' / 'STAKEHOLDER_ELICITATION_AND_FACE_VALIDATION_PROTOCOL_v4.3.md').read_text(encoding='utf-8')
-    assert 'was conducted' in status_text.lower() and 'no empirical calibration' in status_text.lower()
+    status_text = (ROOT / 'docs' / 'ELICITATION_AND_VALIDATION_PROTOCOL.md').read_text(encoding='utf-8')
+    assert 'without empirical calibration' in status_text.lower() and 'prospective' in status_text.lower()
     assert 'face-validation' in status_text.lower()
 
-    global_main = pd.read_csv(ROOT / 'outputs' / 'global_sensitivity' / 'sobol_first_total_indices.csv')
-    global_second = pd.read_csv(ROOT / 'outputs' / 'global_sensitivity' / 'sobol_second_order_indices.csv')
+    global_main = pd.read_csv(ROOT / 'results' / 'global_sensitivity_screening' / 'sobol_first_total_indices.csv')
+    global_second = pd.read_csv(ROOT / 'results' / 'global_sensitivity_screening' / 'sobol_second_order_indices.csv')
     assert {'S1', 'ST', 'S1_low', 'S1_high', 'ST_low', 'ST_high'}.issubset(global_main.columns)
     assert {'S2', 'S2_low', 'S2_high'}.issubset(global_second.columns)
     assert set(global_main['model']) == {'individual', 'service'}
 
 
 def test_sobol_estimators_recover_ishigami_main_total_and_interaction_indices():
-    from global_sensitivity import Parameter, saltelli_design, sobol_indices
+    from sobol_design_and_screening import Parameter, saltelli_design, sobol_indices
 
     parameters = [
         Parameter('x1', 'x1', -np.pi, np.pi, ''),
@@ -250,8 +250,8 @@ def test_sobol_estimators_recover_ishigami_main_total_and_interaction_indices():
     assert np.isclose(second.loc[('x1', 'x3'), 'S2'], 0.2437, atol=0.01)
 
 
-def test_v43_integrated_manuscript_contains_complete_new_analysis_sequence():
-    active = ROOT / 'manuscript' / 'Physical_AI_Psychiatry_Integrated_Manuscript_v4.3.docx'
+def test_integrated_manuscript_contains_complete_new_analysis_sequence():
+    active = ROOT / 'publication' / 'source_material/integrated_model_text.docx'
     with zipfile.ZipFile(active) as zf:
         embedded = [name for name in zf.namelist() if name.startswith('word/media/')]
         document_xml = zf.read('word/document.xml').decode('utf-8')

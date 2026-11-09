@@ -1,10 +1,5 @@
-# Contributing
+# Reproducibility and issues
 
-Use a feature branch and keep simulation changes traceable to explicit assumptions.
+Issues and pull requests can record reproducibility questions, clearly described discrepancies, and proposed improvements to scripts, figures, documentation, or tests. A useful issue includes the command executed, Python/dependency versions, expected and observed behavior, and the relevant result file.
 
-1. Record any parameter change in `config/parameter_provenance.csv` and `CHANGELOG.md`.
-2. Preserve the functionally matched screen comparator and common-random-number design.
-3. Add or update tests for structural invariants and impossible events.
-4. Run `pytest`, `python validate_models.py`, and `python run_all.py` before opening a pull request.
-5. Do not describe synthetic outputs as clinical efficacy, safety, or incidence estimates.
-6. Commit regenerated CSV, PNG, SVG, manuscript, and checksum files when outputs change.
+Changes to model assumptions or estimands are traceable when accompanied by updated configuration, tests, output tables, and the affected figure/table references. Existing numerical results remain available for direct comparison.

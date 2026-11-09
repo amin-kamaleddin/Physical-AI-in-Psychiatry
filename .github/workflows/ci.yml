@@ -1,17 +1,14 @@
-name: simulation-reproducibility-checks
-
+name: Reproducibility checks
 on:
   push:
   pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   tests:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,17 +16,15 @@ jobs:
           python-version: '3.13'
           cache: pip
       - run: python -m pip install -r requirements-dev.txt
-      - name: Run tests
-        run: python -m pytest -q
-      - name: Validate structural model invariants
-        run: python validate_models.py
-      - name: Check current publication artifacts
+      - run: python -m pytest -q
+      - run: python analysis/validate_models.py
+      - name: Verify archived outputs are present
         run: |
-          test "$(find figures/submission_v4_4/png -name 'Figure_*.png' | wc -l)" -eq 6
-          test "$(find figures/submission_v4_4/svg -name 'Figure_*.svg' | wc -l)" -eq 6
-          test -s manuscript/Physical_AI_Psychiatry_Manuscript_v4.5.docx
-          test -s manuscript/Physical_AI_Psychiatry_Supplementary_Information_v4.5.docx
-          test -s outputs/global_sensitivity_v4_4/raw/individual_saltelli_matrix_outputs.csv
+          test "$(find figures/main/png -name 'Figure_*.png' | wc -l)" -eq 6
+          test "$(find figures/main/svg -name 'Figure_*.svg' | wc -l)" -eq 6
+          test -s publication/manuscript.docx
+          test -s publication/supplementary_information.docx
+          test -s results/global_sensitivity/raw/individual_saltelli_matrix_outputs.csv
   full-reproduction:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
@@ -41,6 +36,5 @@ jobs:
           python-version: '3.13'
           cache: pip
       - run: python -m pip install -r requirements-dev.txt
-      - name: Regenerate every analysis (compute intensive)
-        run: python run_all.py
+      - run: python run_all.py
       - run: python -m pytest -q

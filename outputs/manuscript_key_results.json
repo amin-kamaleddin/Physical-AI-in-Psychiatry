@@ -1,0 +1,99 @@
+{
+  "simulation_run_date": "2026-07-29",
+  "individual_replications": 200,
+  "service_replications": 200,
+  "base_individual_n_per_arm": 5000,
+  "repeated_trial_n_per_arm": 1200,
+  "parameter_draws": 250,
+  "response_pp": {
+    "mean_difference": 6.295,
+    "p025_difference": 6.0929166666666665,
+    "p975_difference": 6.499166666666667,
+    "fraction_draws_above_zero": 1.0
+  },
+  "remission_pp": {
+    "mean_difference": 2.197916666666667,
+    "p025_difference": 2.085833333333333,
+    "p975_difference": 2.310833333333333,
+    "fraction_draws_above_zero": 0.995
+  },
+  "completion_pp": {
+    "mean_difference": -5.42375,
+    "p025_difference": -5.689624247643872,
+    "p975_difference": -5.174583333333333,
+    "fraction_draws_above_zero": 0.0
+  },
+  "mean_phq9_change": {
+    "mean_difference": -0.3910068621652006,
+    "p025_difference": -0.4061135971580213,
+    "p975_difference": -0.3759220043311991,
+    "fraction_draws_above_zero": 0.0
+  },
+  "review_minutes": {
+    "mean_difference": 4.375175,
+    "p025_difference": 4.353594399607005,
+    "p975_difference": 4.396196533801543,
+    "fraction_draws_above_zero": 1.0
+  },
+  "near_misses_per_100": {
+    "mean_difference": 0.5454166666666667,
+    "p025_difference": 0.5145833333333334,
+    "p975_difference": 0.5758333333333333,
+    "fraction_draws_above_zero": 0.995
+  },
+  "missed_crisis_weeks_per_100": {
+    "mean_difference": -10.255743139165498,
+    "p025_difference": -11.874428174081777,
+    "p975_difference": -8.533365861373627,
+    "fraction_draws_above_zero": 0.19
+  },
+  "mean_wait_minutes": {
+    "mean_difference": 34.41194026838096,
+    "p025_difference": 30.685366817658764,
+    "p975_difference": 39.0192275495552,
+    "fraction_draws_above_zero": 0.985
+  },
+  "p90_wait_minutes": {
+    "mean_difference": 102.24135025041252,
+    "p025_difference": 89.81906933162811,
+    "p975_difference": 116.2889891206572,
+    "fraction_draws_above_zero": 0.94
+  },
+  "throughput_per_day": {
+    "mean_difference": -0.1601428571428572,
+    "p025_difference": -0.2070000000000001,
+    "p975_difference": -0.1260000000000002,
+    "fraction_draws_above_zero": 0.075
+  },
+  "abandonment_pp": {
+    "mean_difference": 0.456733521695095,
+    "p025_difference": 0.3581428980154172,
+    "p975_difference": 0.5912783055795104,
+    "fraction_draws_above_zero": 0.635
+  },
+  "false_alerts_per_100": {
+    "mean_difference": 2.230501239191072,
+    "p025_difference": 2.179226733796052,
+    "p975_difference": 2.282861184973716,
+    "fraction_draws_above_zero": 1.0
+  },
+  "missed_high_acuity_pp": {
+    "mean_difference": -10.849888033445186,
+    "p025_difference": -11.250720765912137,
+    "p975_difference": -10.47013762549637,
+    "fraction_draws_above_zero": 0.0
+  },
+  "clinician_utilization_pp": {
+    "mean_difference": 1.6139727891156468,
+    "p025_difference": 1.5081949881078578,
+    "p975_difference": 1.6938723892276994,
+    "fraction_draws_above_zero": 0.965
+  },
+  "parameter_uncertainty": {
+    "response_positive_fraction": 0.804,
+    "completion_negative_fraction": 1.0,
+    "phq_change_favorable_fraction": 0.548,
+    "review_positive_fraction": 1.0,
+    "near_miss_positive_fraction": 0.972
+  }
+}

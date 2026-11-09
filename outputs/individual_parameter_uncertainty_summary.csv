@@ -1,0 +1,6 @@
+diagnostic,percent_of_scenario_draws,scenario_resampling_ci_low,scenario_resampling_ci_high,scenario_draws,interpretation
+response_positive,80.4,75.2,84.8,250,Resampling stability over the selected illustrative scenario ensemble; not a posterior or clinical CI
+completion_negative,100.0,100.0,100.0,250,Resampling stability over the selected illustrative scenario ensemble; not a posterior or clinical CI
+phq_change_favorable,54.8,48.8,60.8,250,Resampling stability over the selected illustrative scenario ensemble; not a posterior or clinical CI
+review_positive,100.0,100.0,100.0,250,Resampling stability over the selected illustrative scenario ensemble; not a posterior or clinical CI
+near_miss_positive,97.2,94.4,98.8,250,Resampling stability over the selected illustrative scenario ensemble; not a posterior or clinical CI

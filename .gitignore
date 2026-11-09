@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+*.token
+# Never commit real/clinical/restricted data
+data/private/
+data/restricted/
+data/clinical/
+data/raw_real/
+**/patient_records/
+# Local/editorial build temporary files
+.DS_Store
+.ipynb_checkpoints/
+_docx_render/
+*.aux
+*.log
+*.out
+*.toc
+manuscript/*.synctex.gz

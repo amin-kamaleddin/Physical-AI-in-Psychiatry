@@ -1,0 +1,566 @@
+{
+  "estimand": [
+    {
+      "metric": "completion_percent",
+      "robot_minus_screen_mean": -5.395833333333332,
+      "bootstrap_ci_low": -5.621910900233978,
+      "bootstrap_ci_high": -5.176666666666664,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "response_locf_percent",
+      "robot_minus_screen_mean": 6.23375,
+      "bootstrap_ci_low": 6.03,
+      "bootstrap_ci_high": 6.42875,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "response_bocf_percent",
+      "robot_minus_screen_mean": 5.526666666666667,
+      "bootstrap_ci_low": 5.33375,
+      "bootstrap_ci_high": 5.726894196443404,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "response_completers_percent",
+      "robot_minus_screen_mean": 10.212192197279242,
+      "bootstrap_ci_low": 9.958443413575516,
+      "bootstrap_ci_high": 10.469190922578395,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "remission_locf_percent",
+      "robot_minus_screen_mean": 2.240833333333333,
+      "bootstrap_ci_low": 2.1175,
+      "bootstrap_ci_high": 2.357083333333333,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "remission_bocf_percent",
+      "robot_minus_screen_mean": 2.046666666666667,
+      "bootstrap_ci_low": 1.9261038487856568,
+      "bootstrap_ci_high": 2.1709557401068373,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "remission_completers_percent",
+      "robot_minus_screen_mean": 3.538744702591077,
+      "bootstrap_ci_low": 3.367449155186196,
+      "bootstrap_ci_high": 3.70757311735381,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "mean_change_locf",
+      "robot_minus_screen_mean": -0.3960488994965437,
+      "bootstrap_ci_low": -0.4119499530041995,
+      "bootstrap_ci_high": -0.3806124827948149,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "mean_change_bocf",
+      "robot_minus_screen_mean": -0.2503596980378978,
+      "bootstrap_ci_low": -0.2688378212046178,
+      "bootstrap_ci_high": -0.2317847551196643,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "metric": "mean_change_completers",
+      "robot_minus_screen_mean": -0.837463463599867,
+      "bootstrap_ci_low": -0.8524685665523066,
+      "bootstrap_ci_high": -0.8223269183171755,
+      "replications": 200,
+      "n_per_arm_per_replication": 1200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    }
+  ],
+  "capacity": [
+    {
+      "robot_intake_servers": 2,
+      "metric": "mean_wait_difference_minutes",
+      "robot_minus_screen_mean": 38.34495157395772,
+      "bootstrap_ci_low": 34.34810074561358,
+      "bootstrap_ci_high": 42.708298437432816,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 2,
+      "metric": "p90_wait_difference_minutes",
+      "robot_minus_screen_mean": 109.54151234596716,
+      "bootstrap_ci_low": 96.18499247475884,
+      "bootstrap_ci_high": 125.22267679404594,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 2,
+      "metric": "throughput_difference_per_day",
+      "robot_minus_screen_mean": -0.178,
+      "bootstrap_ci_low": -0.221822825642354,
+      "bootstrap_ci_high": -0.1437527008260669,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 2,
+      "metric": "abandonment_difference_percentage_points",
+      "robot_minus_screen_mean": 0.5043898131482523,
+      "bootstrap_ci_low": 0.4091191181862612,
+      "bootstrap_ci_high": 0.6276726237516794,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 2,
+      "metric": "clinician_utilization_difference_percentage_points",
+      "robot_minus_screen_mean": 1.572136054421768,
+      "bootstrap_ci_low": 1.4718913497751973,
+      "bootstrap_ci_high": 1.6507346343441562,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 3,
+      "metric": "mean_wait_difference_minutes",
+      "robot_minus_screen_mean": 36.39861960531033,
+      "bootstrap_ci_low": 32.438078910786615,
+      "bootstrap_ci_high": 40.91777678125537,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 3,
+      "metric": "p90_wait_difference_minutes",
+      "robot_minus_screen_mean": 108.50423454110424,
+      "bootstrap_ci_low": 94.78581799607772,
+      "bootstrap_ci_high": 124.59967391862324,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 3,
+      "metric": "throughput_difference_per_day",
+      "robot_minus_screen_mean": -0.1775714285714286,
+      "bootstrap_ci_low": -0.2204557280817317,
+      "bootstrap_ci_high": -0.1437142857142856,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 3,
+      "metric": "abandonment_difference_percentage_points",
+      "robot_minus_screen_mean": 0.5031734003869129,
+      "bootstrap_ci_low": 0.4046731586883003,
+      "bootstrap_ci_high": 0.6230215308054691,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 3,
+      "metric": "clinician_utilization_difference_percentage_points",
+      "robot_minus_screen_mean": 1.5730884353741488,
+      "bootstrap_ci_low": 1.474235619414264,
+      "bootstrap_ci_high": 1.6489303826701711,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 4,
+      "metric": "mean_wait_difference_minutes",
+      "robot_minus_screen_mean": 36.17672168065195,
+      "bootstrap_ci_low": 32.178976136812416,
+      "bootstrap_ci_high": 40.72706097556701,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 4,
+      "metric": "p90_wait_difference_minutes",
+      "robot_minus_screen_mean": 108.36774308670368,
+      "bootstrap_ci_low": 94.47954982393658,
+      "bootstrap_ci_high": 124.23614801903452,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 4,
+      "metric": "throughput_difference_per_day",
+      "robot_minus_screen_mean": -0.1775714285714286,
+      "bootstrap_ci_low": -0.2237995367363719,
+      "bootstrap_ci_high": -0.143142857142857,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 4,
+      "metric": "abandonment_difference_percentage_points",
+      "robot_minus_screen_mean": 0.5031734003869129,
+      "bootstrap_ci_low": 0.4080367244935097,
+      "bootstrap_ci_high": 0.6213874622495008,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 4,
+      "metric": "clinician_utilization_difference_percentage_points",
+      "robot_minus_screen_mean": 1.5730884353741488,
+      "bootstrap_ci_low": 1.4718696631971135,
+      "bootstrap_ci_high": 1.6491690522217737,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 5,
+      "metric": "mean_wait_difference_minutes",
+      "robot_minus_screen_mean": 36.15726432453519,
+      "bootstrap_ci_low": 32.225750650411015,
+      "bootstrap_ci_high": 40.6744656725347,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 5,
+      "metric": "p90_wait_difference_minutes",
+      "robot_minus_screen_mean": 108.36190779276014,
+      "bootstrap_ci_low": 94.14333825941743,
+      "bootstrap_ci_high": 123.51131183568144,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 5,
+      "metric": "throughput_difference_per_day",
+      "robot_minus_screen_mean": -0.1775714285714286,
+      "bootstrap_ci_low": -0.221026456515167,
+      "bootstrap_ci_high": -0.1448571428571431,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 5,
+      "metric": "abandonment_difference_percentage_points",
+      "robot_minus_screen_mean": 0.5031734003869129,
+      "bootstrap_ci_low": 0.4112775276482037,
+      "bootstrap_ci_high": 0.6270171591395406,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    },
+    {
+      "robot_intake_servers": 5,
+      "metric": "clinician_utilization_difference_percentage_points",
+      "robot_minus_screen_mean": 1.5730884353741488,
+      "bootstrap_ci_low": 1.4726938710292496,
+      "bootstrap_ci_high": 1.6520552383797154,
+      "replications": 200,
+      "bootstrap_method": "BCa",
+      "bootstrap_resamples": 5000
+    }
+  ],
+  "nested": [
+    {
+      "diagnostic": "response_positive",
+      "percent_of_scenario_draws": 83.2,
+      "scenario_resampling_ci_low": 78.0,
+      "scenario_resampling_ci_high": 87.6,
+      "scenario_draws": 250,
+      "inner_replications_per_draw": 5
+    },
+    {
+      "diagnostic": "completion_negative",
+      "percent_of_scenario_draws": 100.0,
+      "scenario_resampling_ci_low": 100.0,
+      "scenario_resampling_ci_high": 100.0,
+      "scenario_draws": 250,
+      "inner_replications_per_draw": 5
+    },
+    {
+      "diagnostic": "phq_change_favorable",
+      "percent_of_scenario_draws": 59.2,
+      "scenario_resampling_ci_low": 53.2,
+      "scenario_resampling_ci_high": 65.2,
+      "scenario_draws": 250,
+      "inner_replications_per_draw": 5
+    },
+    {
+      "diagnostic": "review_positive",
+      "percent_of_scenario_draws": 100.0,
+      "scenario_resampling_ci_low": 100.0,
+      "scenario_resampling_ci_high": 100.0,
+      "scenario_draws": 250,
+      "inner_replications_per_draw": 5
+    },
+    {
+      "diagnostic": "near_miss_positive",
+      "percent_of_scenario_draws": 100.0,
+      "scenario_resampling_ci_low": 100.0,
+      "scenario_resampling_ci_high": 100.0,
+      "scenario_draws": 250,
+      "inner_replications_per_draw": 5
+    }
+  ],
+  "ablation": [
+    {
+      "parameter_block": "Embodiment symptom increment only",
+      "metric": "response_difference_percentage_points",
+      "mean_difference_vs_screen": 6.022916666666666,
+      "bootstrap_ci_low": 5.8821173563767,
+      "bootstrap_ci_high": 6.166666666666667,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Embodiment symptom increment only",
+      "metric": "completion_difference_percentage_points",
+      "mean_difference_vs_screen": 0.0125,
+      "bootstrap_ci_low": -0.0444444444444444,
+      "bootstrap_ci_high": 0.0909722222222223,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Embodiment symptom increment only",
+      "metric": "review_minutes_difference",
+      "mean_difference_vs_screen": -0.0047083333333333,
+      "bootstrap_ci_low": -0.0064999999999999,
+      "bootstrap_ci_high": -0.0018420169169451,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Embodiment symptom increment only",
+      "metric": "physical_near_miss_difference_per_100",
+      "mean_difference_vs_screen": 0.0,
+      "bootstrap_ci_low": 0.0,
+      "bootstrap_ci_high": 0.0,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Engagement dynamics only",
+      "metric": "response_difference_percentage_points",
+      "mean_difference_vs_screen": 2.5854166666666667,
+      "bootstrap_ci_low": 2.3564508472854238,
+      "bootstrap_ci_high": 2.8013888888888885,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Engagement dynamics only",
+      "metric": "completion_difference_percentage_points",
+      "mean_difference_vs_screen": 2.330555555555556,
+      "bootstrap_ci_low": 2.102051724024034,
+      "bootstrap_ci_high": 2.54375,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Engagement dynamics only",
+      "metric": "review_minutes_difference",
+      "mean_difference_vs_screen": 0.0135,
+      "bootstrap_ci_low": 0.0026666666666667,
+      "bootstrap_ci_high": 0.0240833333333333,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Engagement dynamics only",
+      "metric": "physical_near_miss_difference_per_100",
+      "mean_difference_vs_screen": 0.0,
+      "bootstrap_ci_low": 0.0,
+      "bootstrap_ci_high": 0.0,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Acceptance friction only",
+      "metric": "response_difference_percentage_points",
+      "mean_difference_vs_screen": -1.8513888888888888,
+      "bootstrap_ci_low": -2.0799767168475016,
+      "bootstrap_ci_high": -1.6229166666666663,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Acceptance friction only",
+      "metric": "completion_difference_percentage_points",
+      "mean_difference_vs_screen": -7.13125,
+      "bootstrap_ci_low": -7.427777777777777,
+      "bootstrap_ci_high": -6.827083333333333,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Acceptance friction only",
+      "metric": "review_minutes_difference",
+      "mean_difference_vs_screen": -0.1006666666666666,
+      "bootstrap_ci_low": -0.115632611999087,
+      "bootstrap_ci_high": -0.0869009546761655,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Acceptance friction only",
+      "metric": "physical_near_miss_difference_per_100",
+      "mean_difference_vs_screen": 0.0,
+      "bootstrap_ci_low": 0.0,
+      "bootstrap_ci_high": 0.0,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Reliability and fallback only",
+      "metric": "response_difference_percentage_points",
+      "mean_difference_vs_screen": -0.3236111111111111,
+      "bootstrap_ci_low": -0.5222465424553882,
+      "bootstrap_ci_high": -0.1250000000000002,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Reliability and fallback only",
+      "metric": "completion_difference_percentage_points",
+      "mean_difference_vs_screen": -0.2826388888888887,
+      "bootstrap_ci_low": -0.5013888888888889,
+      "bootstrap_ci_high": -0.0674492219185874,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Reliability and fallback only",
+      "metric": "review_minutes_difference",
+      "mean_difference_vs_screen": -0.0066666666666666,
+      "bootstrap_ci_low": -0.0154583333333333,
+      "bootstrap_ci_high": 0.0019583333333333,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Reliability and fallback only",
+      "metric": "physical_near_miss_difference_per_100",
+      "mean_difference_vs_screen": 0.0,
+      "bootstrap_ci_low": 0.0,
+      "bootstrap_ci_high": 0.0,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Safety oversight and physical exposure only",
+      "metric": "response_difference_percentage_points",
+      "mean_difference_vs_screen": 0.1493055555555555,
+      "bootstrap_ci_low": -0.1271581860096834,
+      "bootstrap_ci_high": 0.4166666666666667,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Safety oversight and physical exposure only",
+      "metric": "completion_difference_percentage_points",
+      "mean_difference_vs_screen": 0.2131944444444444,
+      "bootstrap_ci_low": -0.0656435517770553,
+      "bootstrap_ci_high": 0.5111088715402272,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Safety oversight and physical exposure only",
+      "metric": "review_minutes_difference",
+      "mean_difference_vs_screen": 4.559333333333333,
+      "bootstrap_ci_low": 4.531347311117139,
+      "bootstrap_ci_high": 4.587007941426003,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Safety oversight and physical exposure only",
+      "metric": "physical_near_miss_difference_per_100",
+      "mean_difference_vs_screen": 0.5930555555555556,
+      "bootstrap_ci_low": 0.5534722222222223,
+      "bootstrap_ci_high": 0.6333333333333333,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Full human-gated pathway bundle",
+      "metric": "response_difference_percentage_points",
+      "mean_difference_vs_screen": 6.377777777777779,
+      "bootstrap_ci_low": 6.111111111111111,
+      "bootstrap_ci_high": 6.645398988403873,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Full human-gated pathway bundle",
+      "metric": "completion_difference_percentage_points",
+      "mean_difference_vs_screen": -5.560416666666667,
+      "bootstrap_ci_low": -5.8624272492294685,
+      "bootstrap_ci_high": -5.250621148898367,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Full human-gated pathway bundle",
+      "metric": "review_minutes_difference",
+      "mean_difference_vs_screen": 4.355333333333333,
+      "bootstrap_ci_low": 4.327840613723437,
+      "bootstrap_ci_high": 4.383105069134719,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    },
+    {
+      "parameter_block": "Full human-gated pathway bundle",
+      "metric": "physical_near_miss_difference_per_100",
+      "mean_difference_vs_screen": 0.5284722222222221,
+      "bootstrap_ci_low": 0.4916666666666666,
+      "bootstrap_ci_high": 0.5680555555555556,
+      "replications": 120,
+      "n_per_arm_per_replication": 1200
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+physical_ai_psychiatry_safety_case:
+  system_identity:
+    name: ""
+    version: ""
+    vendor_or_owner: ""
+    accountable_clinical_owner: ""
+  intended_use:
+    population: ""
+    setting: ""
+    clinical_task: ""
+    explicit_non_uses:
+      - autonomous diagnosis
+      - autonomous prescribing
+      - autonomous involuntary intervention
+      - autonomous crisis disposition
+  embodiment:
+    form_factor: social_robot | mobile_robot | wearable | ambient_system | neurodevice | mixed_reality
+    physical_actions: []
+    maximum_force_speed_energy: ""
+    proximity_and_contact_rules: ""
+    infection_control_protocol: ""
+    emergency_stop_and_manual_recovery: ""
+  autonomy:
+    level: 0-5
+    allowed_actions: []
+    prohibited_actions: []
+    human_authorization_points: []
+    degraded_mode: ""
+    fail_safe_state: ""
+  sensing_and_data:
+    modalities: []
+    bystander_capture_controls: []
+    consent_and_revocation: ""
+    edge_processing: ""
+    retention_and_secondary_use: ""
+  clinical_performance:
+    reference_standard: ""
+    subgroup_metrics: []
+    calibration_metrics: []
+    false_positive_budget: ""
+    false_negative_budget: ""
+  human_factors:
+    therapeutic_alliance_endpoint: ""
+    anthropomorphism_and_deception_controls: ""
+    over_reliance_monitoring: ""
+    patient_preference_and_opt_out: ""
+    accessibility_and_cultural_adaptation: ""
+  cyber_physical_security:
+    threat_model: []
+    authentication_and_authorization: ""
+    secure_update_and_rollback: ""
+    sensor_spoofing_tests: []
+    ransomware_and_connectivity_failover: ""
+  evidence_and_change_control:
+    preclinical_simulation: []
+    silent_or_shadow_trial: ""
+    prospective_clinical_evidence: ""
+    postmarket_monitoring: []
+    predetermined_change_control_plan: ""
+  stop_rules:
+    - missed crisis above threshold
+    - physical injury or repeated near-miss cluster
+    - subgroup performance degradation
+    - privacy breach or bystander capture failure
+    - unexplained drift or unsafe model update
+    - inability to enter safe degraded mode

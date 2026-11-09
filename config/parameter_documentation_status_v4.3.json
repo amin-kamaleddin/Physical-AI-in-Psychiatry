@@ -1,0 +1,8 @@
+{
+  "individual_parameter_rows": 47,
+  "service_parameter_rows": 33,
+  "empirical_calibration_completed": false,
+  "structured_multi_stakeholder_elicitation_completed": false,
+  "external_face_validation_completed": false,
+  "available_protocol": "docs/STAKEHOLDER_ELICITATION_AND_FACE_VALIDATION_PROTOCOL_v4.3.md"
+}

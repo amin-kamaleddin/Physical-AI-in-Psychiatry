@@ -1,0 +1,29 @@
+scale,scenario,metric,outcome,mean_difference,bootstrap_ci_low,bootstrap_ci_high,replications
+Patient,Human-gated robot - neutral assumptions,response_percent,Response difference (percentage points),-1.38125,-1.57125,-1.178684597873755,200
+Patient,Human-gated robot - neutral assumptions,remission_percent,Remission difference (percentage points),-0.3479166666666667,-0.45458333333333345,-0.23541666666666672,200
+Patient,Human-gated robot - neutral assumptions,completion_percent,Completion difference (percentage points),-5.907916666666666,-6.145833333333334,-5.660416666666667,200
+Patient,Human-gated robot - neutral assumptions,mean_phq9_change,Mean PHQ-9 change difference,0.2437043935292818,0.22830677255571402,0.2594825802021482,200
+Patient,Human-gated robot - neutral assumptions,mean_clinician_review_minutes,Review-time difference (minutes/participant),4.5556375000000005,4.5337250000000004,4.5786875,200
+Patient,Human-gated robot - neutral assumptions,missed_crises_per_100_crisis_weeks,Missed crisis-weeks difference per 100 crisis-weeks,-5.905416802652618,-7.452755994009255,-4.443927274823072,200
+Patient,Human-gated robot - neutral assumptions,physical_near_misses_per_100,Physical near-miss difference per 100 participants,0.5875,0.555,0.6195833333333334,200
+Patient,Human-gated robot - skeptical assumptions,response_percent,Response difference (percentage points),-8.830833333333333,-9.01875,-8.628363795425082,200
+Patient,Human-gated robot - skeptical assumptions,remission_percent,Remission difference (percentage points),-2.3925,-2.495,-2.292534538057618,200
+Patient,Human-gated robot - skeptical assumptions,completion_percent,Completion difference (percentage points),-26.155,-26.41708333333333,-25.904274221586178,200
+Patient,Human-gated robot - skeptical assumptions,mean_phq9_change,Mean PHQ-9 change difference,1.458070795515157,1.4410955143555084,1.475159390628053,200
+Patient,Human-gated robot - skeptical assumptions,mean_clinician_review_minutes,Review-time difference (minutes/participant),9.64465,9.606496359287094,9.681740020713242,200
+Patient,Human-gated robot - skeptical assumptions,missed_crises_per_100_crisis_weeks,Missed crisis-weeks difference per 100 crisis-weeks,-2.6107798603636794,-4.343117440574316,-0.816424554780621,200
+Patient,Human-gated robot - skeptical assumptions,physical_near_misses_per_100,Physical near-miss difference per 100 participants,0.7629166666666666,0.7275,0.7977406588076443,200
+Service,Human-gated robot - neutral assumptions,mean_wait_minutes,Mean wait difference (working minutes),0.919482038449296,0.8850926111784744,0.9355581224387153,200
+Service,Human-gated robot - neutral assumptions,p90_wait_minutes,P90 wait difference (working minutes),0.6777089018697013,0.5769259192976437,0.7431383232477948,200
+Service,Human-gated robot - neutral assumptions,throughput_per_day,Throughput difference (assessments/day),-0.0001428571428571246,-0.0007465323045618138,0.0,200
+Service,Human-gated robot - neutral assumptions,abandonment_percent,Abandonment difference (percentage points),0.0004071661237785018,0.0,0.002035830618892509,200
+Service,Human-gated robot - neutral assumptions,false_alerts_per_100_arrivals,False-alert difference per 100 arrivals,0.0,0.0,0.0,200
+Service,Human-gated robot - neutral assumptions,missed_high_acuity_percent,Missed high-acuity difference (percentage points),0.0,0.0,0.0,200
+Service,Human-gated robot - neutral assumptions,mean_clinician_utilization_percent,Clinician-utilization difference (percentage points),-0.00036054421768710654,-0.002163265306122639,0.0,200
+Service,Human-gated robot - skeptical assumptions,mean_wait_minutes,Mean wait difference (working minutes),205.65902377122438,195.18458004226505,221.16657779173732,200
+Service,Human-gated robot - skeptical assumptions,p90_wait_minutes,P90 wait difference (working minutes),379.9768011317236,356.45333985773505,413.63476731519734,200
+Service,Human-gated robot - skeptical assumptions,throughput_per_day,Throughput difference (assessments/day),-1.5378571428571426,-1.687285714285714,-1.4057523192905856,200
+Service,Human-gated robot - skeptical assumptions,abandonment_percent,Abandonment difference (percentage points),4.385833882815082,4.012348555796658,4.804407286654419,200
+Service,Human-gated robot - skeptical assumptions,false_alerts_per_100_arrivals,False-alert difference per 100 arrivals,4.985404435580078,4.899082736246618,5.074715985918473,200
+Service,Human-gated robot - skeptical assumptions,missed_high_acuity_percent,Missed high-acuity difference (percentage points),-2.174377424461156,-2.33823810853483,-2.0149283462141474,200
+Service,Human-gated robot - skeptical assumptions,mean_clinician_utilization_percent,Clinician-utilization difference (percentage points),9.643285714285714,9.247210088274315,9.979304001044067,200

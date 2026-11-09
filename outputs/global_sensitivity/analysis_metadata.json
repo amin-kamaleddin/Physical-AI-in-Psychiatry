@@ -1,0 +1,23 @@
+{
+  "method": "Scrambled Sobol A/B cross-sampling with Saltelli first-, total-, and second-order estimators",
+  "seed": 20260730,
+  "n_base": 128,
+  "inner_replications": 2,
+  "bootstrap_resamples": 200,
+  "input_distribution": "Independent Uniform distributions over the declared parameter ranges",
+  "individual_parameters": 12,
+  "service_parameters": 11,
+  "individual_participants_per_arm_per_inner_evaluation": 350,
+  "service_observed_days_per_inner_evaluation": 18,
+  "individual_evaluations": 3328,
+  "service_evaluations": 3072,
+  "raw_design_files": [
+    "raw/individual_saltelli_design_inputs.csv",
+    "raw/service_saltelli_design_inputs.csv"
+  ],
+  "raw_output_files": [
+    "raw/individual_saltelli_matrix_outputs.csv",
+    "raw/service_saltelli_matrix_outputs.csv"
+  ],
+  "interpretation": "Variance decomposition over declared independent uniform ranges; not a posterior uncertainty distribution."
+}

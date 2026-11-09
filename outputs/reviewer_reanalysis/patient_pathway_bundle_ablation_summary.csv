@@ -1,0 +1,25 @@
+parameter_block,metric,mean_difference_vs_screen,bootstrap_ci_low,bootstrap_ci_high,replications,n_per_arm_per_replication
+Embodiment symptom increment only,response_difference_percentage_points,6.022916666666666,5.8821173563767,6.166666666666667,120,1200
+Embodiment symptom increment only,completion_difference_percentage_points,0.012500000000000011,-0.04444444444444445,0.09097222222222238,120,1200
+Embodiment symptom increment only,review_minutes_difference,-0.004708333333333331,-0.006499999999999971,-0.0018420169169451918,120,1200
+Embodiment symptom increment only,physical_near_miss_difference_per_100,0.0,0.0,0.0,120,1200
+Engagement dynamics only,response_difference_percentage_points,2.5854166666666667,2.3564508472854233,2.8013888888888885,120,1200
+Engagement dynamics only,completion_difference_percentage_points,2.3305555555555557,2.102051724024034,2.54375,120,1200
+Engagement dynamics only,review_minutes_difference,0.013500000000000009,0.0026666666666667026,0.02408333333333336,120,1200
+Engagement dynamics only,physical_near_miss_difference_per_100,0.0,0.0,0.0,120,1200
+Acceptance friction only,response_difference_percentage_points,-1.8513888888888888,-2.0799767168475016,-1.6229166666666663,120,1200
+Acceptance friction only,completion_difference_percentage_points,-7.13125,-7.427777777777777,-6.827083333333333,120,1200
+Acceptance friction only,review_minutes_difference,-0.10066666666666665,-0.115632611999087,-0.08690095467616553,120,1200
+Acceptance friction only,physical_near_miss_difference_per_100,0.0,0.0,0.0,120,1200
+Reliability and fallback only,response_difference_percentage_points,-0.3236111111111111,-0.5222465424553882,-0.1250000000000002,120,1200
+Reliability and fallback only,completion_difference_percentage_points,-0.2826388888888887,-0.5013888888888889,-0.0674492219185874,120,1200
+Reliability and fallback only,review_minutes_difference,-0.0066666666666666576,-0.015458333333333345,0.001958333333333344,120,1200
+Reliability and fallback only,physical_near_miss_difference_per_100,0.0,0.0,0.0,120,1200
+Safety oversight and physical exposure only,response_difference_percentage_points,0.14930555555555555,-0.12715818600968345,0.4166666666666667,120,1200
+Safety oversight and physical exposure only,completion_difference_percentage_points,0.21319444444444446,-0.06564355177705533,0.5111088715402272,120,1200
+Safety oversight and physical exposure only,review_minutes_difference,4.559333333333333,4.531347311117139,4.587007941426003,120,1200
+Safety oversight and physical exposure only,physical_near_miss_difference_per_100,0.5930555555555556,0.5534722222222223,0.6333333333333333,120,1200
+Full human-gated pathway bundle,response_difference_percentage_points,6.377777777777779,6.111111111111111,6.645398988403873,120,1200
+Full human-gated pathway bundle,completion_difference_percentage_points,-5.560416666666667,-5.8624272492294685,-5.250621148898367,120,1200
+Full human-gated pathway bundle,review_minutes_difference,4.355333333333333,4.327840613723437,4.383105069134719,120,1200
+Full human-gated pathway bundle,physical_near_miss_difference_per_100,0.5284722222222221,0.49166666666666664,0.5680555555555556,120,1200

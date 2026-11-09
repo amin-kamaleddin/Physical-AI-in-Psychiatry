@@ -1,0 +1,6 @@
+diagnostic,percent_of_scenario_draws,scenario_resampling_ci_low,scenario_resampling_ci_high,scenario_draws,inner_replications_per_draw
+response_positive,83.2,78.0,87.6,250,5
+completion_negative,100.0,100.0,100.0,250,5
+phq_change_favorable,59.2,53.2,65.2,250,5
+review_positive,100.0,100.0,100.0,250,5
+near_miss_positive,100.0,100.0,100.0,250,5

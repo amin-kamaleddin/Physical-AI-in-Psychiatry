@@ -1,0 +1,14 @@
+model,outcome,outcome_label,largest_total_order_parameter,largest_total_order_parameter_label,largest_total_order_ST,largest_first_order_S1,largest_interaction,largest_interaction_S2
+individual,response_difference_pp,Response difference (percentage points),embodiment_effect,Embodiment symptom increment,0.38852437270443513,0.36613136138917945,Session downtime x Screen fallback,0.07125253650663205
+individual,completion_difference_pp,Completion difference (percentage points),discomfort_dropout,Embodiment dropout increment,0.6517526565921894,0.8397059055786408,Privacy penalty x Screen fallback,0.027992876718758615
+individual,mean_phq9_change_difference,Mean PHQ-9 change difference,initial_refusal,Initial refusal,0.3082122162774755,0.3224798530430668,Embodiment symptom increment x Session downtime,0.08210926902643843
+individual,review_minutes_difference,Review-time difference (minutes/participant),routine_audit_minutes,Routine audit,0.5222854356574457,0.5084734632138103,Initial refusal x Review time per alert,0.0351188526293541
+individual,missed_crisis_difference,Missed crisis-weeks difference per 100 crisis-weeks,initial_refusal,Initial refusal,0.2434001304409842,-0.004965789617546172,Initial refusal x Embodiment dropout increment,0.21049278574545147
+individual,near_miss_difference,Physical near-miss difference per 100 participants,physical_near_miss_per_active_week,Physical near-miss rate,0.6516512484187169,0.7331076544710565,Embodiment dropout increment x Screen fallback,0.12470759510667928
+service,mean_wait_difference_minutes,Mean wait difference (minutes),arrivals_per_day,Demand,0.615301120775413,0.11611748431340332,Demand x Day-level downtime,0.8247325962006928
+service,p90_wait_difference_minutes,P90 wait difference (minutes),downtime_day_probability,Day-level downtime,0.5001731706219166,0.4656996378335057,Demand x Day-level downtime,0.6997531386139784
+service,throughput_difference_per_day,Throughput difference (assessments/day),arrivals_per_day,Demand,0.9455503582489626,0.2484085383979275,Demand x Clinician servers,0.08373270896650105
+service,abandonment_difference_pp,Abandonment difference (percentage points),arrivals_per_day,Demand,0.8668293934411695,0.20003177106663403,Demand x Clinician servers,0.09170180400283401
+service,false_alert_difference_per_100,False-alert difference per 100 arrivals,false_alert_probability,False-alert probability,0.9559651481624811,0.956671931429343,Demand x Robot intake stations,0.014705032603923689
+service,missed_high_acuity_difference_pp,Missed high-acuity difference (percentage points),high_acuity_detection_sensitivity,High-acuity sensitivity,1.0216420782184368,0.9599822924009234,Robot intake stations x High-acuity sensitivity,0.0
+service,clinician_utilization_difference_pp,Clinician-utilization difference (percentage points),clinician_review_minutes,Mandatory review,0.48130750225007574,0.533146286570481,Demand x Clinician servers,0.14301461301683824

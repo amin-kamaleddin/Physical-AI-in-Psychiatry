@@ -1,0 +1,16 @@
+{
+  "method": "Scrambled Sobol A/B cross design; Saltelli covariance S1, Jansen ST, Saltelli second-order; CRN synchronized by design row",
+  "n_base": 1024,
+  "inner_replications": 2,
+  "participants_per_arm_per_replication": 350,
+  "observed_service_days": 18,
+  "seed": 20261108,
+  "input_parameter_distributions": "Independent uniform, structural stress-test ranges not posterior uncertainty",
+  "service_arrivals": "Single maximum-rate Poisson stream thinned by fixed uniforms per design row to preserve nested arrivals under changing demand",
+  "bootstrap_resamples": 350,
+  "disclaimer": "Raw finite-sample estimator values and uncertainty intervals retained without truncation or forced normalization; potentially unstable indices are not interpreted.",
+  "n_evaluations": {
+    "individual": 26624,
+    "service": 24576
+  }
+}

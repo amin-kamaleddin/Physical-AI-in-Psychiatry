@@ -6,18 +6,6 @@ This repository accompanies a study of physical AI pathways in psychiatric care.
 
 The central research question is whether embodied systems can deliver incremental patient benefit while meeting operational requirements for completion, clinician workload, accessibility, and safety. The models contrast usual/manual care, a functionally matched screen interface, an embodied robot, and a robot with human verification.
 
-## Read the study
-
-| Resource | Location |
-| --- | --- |
-| Manuscript (PDF) | [publication/manuscript.pdf](publication/manuscript.pdf) |
-| Editable manuscript | [publication/manuscript.docx](publication/manuscript.docx) |
-| Supplementary Information | [PDF](publication/supplementary_information.pdf) · [DOCX](publication/supplementary_information.docx) |
-| Main figures | [figures/main](figures/main) — six multi-panel figures in SVG and PNG |
-| Results linked to code | [docs/RESULTS_TO_CODE.md](docs/RESULTS_TO_CODE.md) |
-| Mathematical and operational equations | [docs/MODEL_SPECIFICATION.md](docs/MODEL_SPECIFICATION.md) |
-| Study scope and validation status | [docs/MODEL_SCOPE.md](docs/MODEL_SCOPE.md) |
-
 ## Reproduce or extend the analysis
 
 | Resource | Location |
